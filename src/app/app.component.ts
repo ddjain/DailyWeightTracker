@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 import { DataService } from './data.service';
 import * as uuid from 'uuid';
+import * as CanvasJS from '../assets/canvasjs.min';
 
 @Component({
   selector: 'app-root',
@@ -48,7 +49,7 @@ export class AppComponent {
     this.history=JSON.parse(localStorage.getItem("history"));
     this.history.push({"id":myId,"date":this.date,"weight":this.weight,"desc":this.desc});
     localStorage.setItem("history",JSON.stringify(this.history));
-
+    this.loadGraph(this.getDataPoints());
     this.date=null;
     this.weight=null;
     this.desc=null;
@@ -69,10 +70,60 @@ export class AppComponent {
     }
   }
 
+
+  edit(){
+
+  }
+
+  delete(){
+    
+  }
+
+
+  loadGraph(dataPoints){
+    let chart =  new CanvasJS.Chart("chartContainer",
+    {
+      theme: "dark2", //"light1", "dark1", "dark2"
+      title:{
+        text: ""
+    },
+    axisX:{
+        title: "",
+        gridThickness: 0.2
+    },
+    axisY: {
+         gridThickness: 0.2,
+         title: ""
+    },
+    data: [
+    {        
+        type: "line",
+        dataPoints: dataPoints
+    }
+    ]
+});
+
+		chart.render();
+  }
+
   ngOnInit() {
     this.data.gimmeJokes().subscribe(res => {
       this.joke = res;
     })
+
+
+		
+		
+    this.loadGraph(this.getDataPoints())
+  }
+
+  getDataPoints(){
+    let datapoints=[];
+    this.history=this.getWeight();
+    for(let i=0;i<this.history.length;i++){
+      datapoints.push({"x":new Date(this.history[i].date),"y":this.history[i].weight,"desc":this.history[i].desc})
+    }
+    return datapoints;
   }
 
 }
