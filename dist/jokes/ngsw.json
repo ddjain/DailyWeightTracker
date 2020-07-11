@@ -1,0 +1,87 @@
+{
+  "configVersion": 1,
+  "index": "https://darshu8.github.io/DailyWeightTracker/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://darshu8.github.io/DailyWeightTracker/favicon.ico",
+        "https://darshu8.github.io/DailyWeightTracker/index.html",
+        "https://darshu8.github.io/DailyWeightTracker/main.bdb96a62401d0a78936a.js",
+        "https://darshu8.github.io/DailyWeightTracker/polyfills.c73631205450cdf588fb.js",
+        "https://darshu8.github.io/DailyWeightTracker/runtime.a66f828dca56eeb90e02.js",
+        "https://darshu8.github.io/DailyWeightTracker/styles.78b517747f7a3c7d332a.css"
+      ],
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/.*"
+      ]
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://darshu8.github.io/DailyWeightTracker/assets/canvasjs.min.js",
+        "https://darshu8.github.io/DailyWeightTracker/assets/icons/icon-128x128.png",
+        "https://darshu8.github.io/DailyWeightTracker/assets/icons/icon-144x144.png",
+        "https://darshu8.github.io/DailyWeightTracker/assets/icons/icon-152x152.png",
+        "https://darshu8.github.io/DailyWeightTracker/assets/icons/icon-192x192.png",
+        "https://darshu8.github.io/DailyWeightTracker/assets/icons/icon-384x384.png",
+        "https://darshu8.github.io/DailyWeightTracker/assets/icons/icon-512x512.png",
+        "https://darshu8.github.io/DailyWeightTracker/assets/icons/icon-72x72.png",
+        "https://darshu8.github.io/DailyWeightTracker/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "jokes-api",
+      "patterns": [
+        "https:\\/\\/api\\.chucknorris\\.io\\/jokes\\/random"
+      ],
+      "strategy": "freshness",
+      "maxSize": 20,
+      "maxAge": 3600000,
+      "timeoutMs": 5000,
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "https://darshu8.github.io/DailyWeightTracker/assets/canvasjs.min.js": "d30ede8433615440886a7057fc0e49df32ba82ef",
+    "https://darshu8.github.io/DailyWeightTracker/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://darshu8.github.io/DailyWeightTracker/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://darshu8.github.io/DailyWeightTracker/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://darshu8.github.io/DailyWeightTracker/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://darshu8.github.io/DailyWeightTracker/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://darshu8.github.io/DailyWeightTracker/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://darshu8.github.io/DailyWeightTracker/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://darshu8.github.io/DailyWeightTracker/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://darshu8.github.io/DailyWeightTracker/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "https://darshu8.github.io/DailyWeightTracker/index.html": "46e7326486476b2b058a3f1614630299546cbc49",
+    "https://darshu8.github.io/DailyWeightTracker/main.bdb96a62401d0a78936a.js": "7cc70316a5787494a5d19934177f4314b97e5619",
+    "https://darshu8.github.io/DailyWeightTracker/polyfills.c73631205450cdf588fb.js": "8949bb1b1e302dda246f6ed9c2da703270360b1f",
+    "https://darshu8.github.io/DailyWeightTracker/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
+    "https://darshu8.github.io/DailyWeightTracker/styles.78b517747f7a3c7d332a.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^\\/]*\\.[^\\/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^\\/]*__[^\\/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^\\/]*__[^\\/]*\\/.*$"
+    }
+  ]
+}
